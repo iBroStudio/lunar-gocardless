@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace IBroStudio\GoCardless\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class GoCardlessCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'lunar-gocardless';
 
     public $description = 'My command';
 

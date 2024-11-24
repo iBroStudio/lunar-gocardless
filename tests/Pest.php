@@ -1,6 +1,6 @@
 <?php
 
-use IBroStudio\Skeleton\Tests\TestCase;
+use IBroStudio\GoCardless\Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 pest()

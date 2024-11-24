@@ -1,4 +1,4 @@
-# :package_description
+# Lunar GoCardless
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
@@ -7,20 +7,20 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require :vendor_slug/:package_slug
+composer require ibrostudio/lunar-gocardless
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-migrations"
+php artisan vendor:publish --tag="lunar-gocardless-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-config"
+php artisan vendor:publish --tag="lunar-gocardless-config"
 ```
 
 This is the contents of the published config file:
@@ -33,14 +33,14 @@ return [
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-views"
+php artisan vendor:publish --tag="lunar-gocardless-views"
 ```
 
 ## Usage
 
 ```php
-$variable = new VendorName\Skeleton();
-echo $variable->echoPhrase('Hello, VendorName!');
+$goCardless = new IBroStudio\GoCardless();
+echo $goCardless->echoPhrase('Hello, IBroStudio!');
 ```
 
 ## Testing

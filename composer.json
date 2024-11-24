@@ -1,13 +1,13 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
-    "keywords": ["laravel", ":package_slug"],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "name": "ibrostudio/lunar-gocardless",
+    "description": "Lunar GoCardless",
+    "keywords": ["laravel", "lunar-gocardless"],
+    "homepage": "https://github.com/ibrostudio/lunar-gocardless",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "iBroStudio",
+            "email": "hello@ibro.studio",
             "role": "Developer"
         }
     ],
@@ -31,13 +31,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "IBroStudio\\GoCardless\\": "src/",
+            "IBroStudio\\GoCardless\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "IBroStudio\\GoCardless\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -55,13 +55,39 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "IBroStudio\\GoCardless\\GoCardlessServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "GoCardless": "IBroStudio\\GoCardless\\Facades\\GoCardless"
             }
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:ibrostudio/filament-billing.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:ibrostudio/filament-panel-manager.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:ibrostudio/filament-user.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:ibrostudio/filament-tenant.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:ibrostudio/laravel-test-support.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:ibrostudio/lunar-subscription.git"
+        }
+    ]
 }

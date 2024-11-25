@@ -14,15 +14,10 @@ class Customer extends CustomerMethod implements CustomerMethodContract
 {
     use HasClassProperty;
 
-    protected function casts(): array
-    {
-        return array_merge(parent::casts(), [
-            'credentials' => DataObjectCast::class.':'.FakePaymentCustomerMethodData::class,
-        ]);
-    }
+    public static string $dataClass = FakePaymentCustomerMethodData::class;
 
     public function method(): BelongsTo
     {
-        return $this->belongsTo(FakePaymentMethod::class);
+        return $this->belongsTo(FakePaymentMethod::class, 'method_id');
     }
 }

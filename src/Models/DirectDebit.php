@@ -13,6 +13,6 @@ class DirectDebit extends Method implements MethodContract
 
     public function gateway(): BelongsTo
     {
-        return $this->belongsTo(GoCardless::class);
+        return $this->belongsTo(GoCardless::class, 'gateway_id');
     }
 }

@@ -12,10 +12,5 @@ class GoCardless extends Gateway implements GatewayContract
 {
     use HasClassProperty;
 
-    protected function casts(): array
-    {
-        return [
-            'credentials' => DataObjectCast::class.':'.GatewayData::class,
-        ];
-    }
+    public static string $dataClass = GatewayData::class;
 }

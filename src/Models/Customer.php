@@ -2,7 +2,6 @@
 
 namespace IBroStudio\GoCardless\Models;
 
-use IBroStudio\DataRepository\Casts\DataObjectCast;
 use IBroStudio\PaymentMethodManager\Concerns\HasClassProperty;
 use IBroStudio\PaymentMethodManager\Contracts\CustomerMethodContract;
 use IBroStudio\PaymentMethodManager\Models\CustomerMethod;

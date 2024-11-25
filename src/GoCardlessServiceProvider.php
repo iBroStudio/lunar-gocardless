@@ -2,13 +2,13 @@
 
 namespace IBroStudio\GoCardless;
 
+use IBroStudio\GoCardless\Commands\GoCardlessCommand;
 use IBroStudio\GoCardless\Models\BankWire;
 use IBroStudio\GoCardless\Models\DirectDebit;
 use IBroStudio\GoCardless\Models\GoCardless;
 use IBroStudio\PaymentMethodManager\Facades\PaymentMethodRegistry;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use IBroStudio\GoCardless\Commands\GoCardlessCommand;
 
 class GoCardlessServiceProvider extends PackageServiceProvider
 {

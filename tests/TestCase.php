@@ -2,9 +2,9 @@
 
 namespace IBroStudio\GoCardless\Tests;
 
+use IBroStudio\GoCardless\GoCardlessServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use IBroStudio\GoCardless\GoCardlessServiceProvider;
 
 class TestCase extends Orchestra
 {

@@ -6,6 +6,7 @@ use Filament\Forms;
 use IBroStudio\DataRepository\Concerns\ConvertiblesDataProperties;
 use IBroStudio\DataRepository\Transformers\ValueObjectTransformer;
 use IBroStudio\DataRepository\ValueObjects\EncryptableText;
+use Illuminate\Database\Eloquent\Model;
 use Spatie\LaravelData\Attributes\WithTransformer;
 use Spatie\LaravelData\Data;
 
@@ -25,17 +26,19 @@ class GatewayData extends Data
     {
         return Forms\Components\Grid::make(1)
             ->schema([
-                Forms\Components\TextInput::make('access_token')
+                Forms\Components\TextInput::make('credentials.access_token')
+                    ->formatStateUsing(fn ($state, Model $record) => $record->credentials->access_token->decrypt())
                     ->password()
                     ->revealable()
                     ->required(),
 
-                Forms\Components\TextInput::make('webhook_secret')
+                Forms\Components\TextInput::make('credentials.webhook_secret')
+                    ->formatStateUsing(fn ($state, Model $record) => $record->credentials->webhook_secret->decrypt())
                     ->password()
                     ->revealable()
                     ->required(),
 
-                Forms\Components\ToggleButtons::make('environment')
+                Forms\Components\ToggleButtons::make('credentials.environment')
                     ->options([
                         'test' => 'Test',
                         'production' => 'Production',

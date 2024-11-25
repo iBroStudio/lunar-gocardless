@@ -4,7 +4,9 @@ namespace IBroStudio\GoCardless\Data;
 
 use Filament\Forms;
 use IBroStudio\DataRepository\Concerns\ConvertiblesDataProperties;
+use IBroStudio\DataRepository\Transformers\ValueObjectTransformer;
 use IBroStudio\DataRepository\ValueObjects\EncryptableText;
+use Spatie\LaravelData\Attributes\WithTransformer;
 use Spatie\LaravelData\Data;
 
 class GatewayData extends Data
@@ -12,7 +14,9 @@ class GatewayData extends Data
     use ConvertiblesDataProperties;
 
     public function __construct(
+        #[WithTransformer(ValueObjectTransformer::class)]
         public EncryptableText $access_token,
+        #[WithTransformer(ValueObjectTransformer::class)]
         public EncryptableText $webhook_secret,
         public string $environment,
     ) {}
